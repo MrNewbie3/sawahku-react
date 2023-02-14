@@ -1,11 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Controls from "./pages/Controls";
 
 
 function App() {
   return (
-    <div className='h-screen flex justify-center items-center'>
-      <h1 className="text-4xl font-bold text-blue-600">Hello world . . .</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/controls" element={<Controls />} />
+      </Routes>
+    </Router>
   );
 }
 
